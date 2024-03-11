@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ai_color_generator"
+version = "0.1.0"
+description = ""
+authors = ["syuuma-ito <itosyuuma@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+taskipy = "^1.12.2"
+rich = "^13.7.1"
+python-dotenv = "^1.0.1"
+google-generativeai = "^0.4.0"
+jsonschema = "^4.21.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+start = "python src/main.py"
+dev = "python src/main.py"
+build = "pyinstaller src/main.py --onefile"
